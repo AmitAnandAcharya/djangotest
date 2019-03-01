@@ -1,0 +1,6 @@
+
+- hosts: root@172.31.21.41
+  vars:
+     contents: "{{ lookup('file', '/django/portal/file2') }}"
+  tasks:
+     - command: yum install {{ contents  }} -y

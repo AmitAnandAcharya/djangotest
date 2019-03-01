@@ -1,0 +1,7 @@
+---
+- hosts: root@172.31.21.41
+  vars:
+     contents: "{{ lookup('file', '/django/portal/file1') }}"
+  tasks:
+     - command: hostname {{ contents }}
+
